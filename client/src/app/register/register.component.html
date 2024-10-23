@@ -1,0 +1,24 @@
+<form #registerForm="ngForm" (ngSubmit)="register()">
+    <h2 class="text-center text-primary">
+        Sign Up
+    </h2>
+    <hr>
+    <div class="mb-3 form-floating">
+        <input name="username" [(ngModel)]="model.username" class="form-control me-2" placeholder="Username"
+            autocomplete="off"> <!-- Added autocomplete="username" -->
+        <label>Username</label>
+    </div>
+
+
+    <div class="mb-3 form-floating">
+        <input name="password" [(ngModel)]="model.password" class="form-control me-2 ng-untouched ng-pristine ng-valid"
+            type="password" placeholder="Password" autocomplete="current-password">
+        <!-- Added autocomplete="current-password" -->
+
+        <label>Password</label>
+    </div>
+    <div class="form-group text-center">
+        <button class="btn btn-success me-2" type="submit">Register</button>
+        <button class="btn btn-default me-2" (click)="cancel()" type="button">Cancel</button>
+    </div>
+</form>
