@@ -45,14 +45,14 @@
             </tab>
             
             <tab heading="Photos" #photoTab="tab">
+
                 @if (photoTab.active) {
                     <gallery 
-                    [items]="images" 
-                    thumbPosition="left">
-    
+                      [items]="images"
+                      [itemAutosize]="true" 
+                      class="gallery">
                     </gallery>
                 }
-                
             </tab>
             <tab heading="Messages">
                 <p>Photos will go here</p>
